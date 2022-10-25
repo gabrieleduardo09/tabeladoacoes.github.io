@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/tabela-icon.png" type="image/x-icon">
+    <title>Tabela Dinâmica</title>
+</head>
+<body>
+    <form name="formulario" id="formulario" >
+        <table id="table">
+            <tr>
+                <th>Nome do Contribuinte</th>
+                <th>E-mail</th>
+                <th>Instituição Beneficiada</th>
+                <th>Valor Pago</th>
+            </tr>
+            <tr id="linhas" class="linhas" >
+                <td><input  type="text" id="idNome" name="cNome" class="cNome" required maxlength="45"></td>
+                <td><input type="email" id="idEmail" name="cEmail" required maxlength="50"></td>
+                <td><select id="idInstituicoes" name="cInstituicoes" required>
+                    <option value=""></option>
+                    <option value="1">Hospital</option>
+                    <option value="2">Creche</option>
+                    <option value="3">Museu</option>
+                </select></td>
+                <td><input type="number" id="idValor" name="cValor" required maxlength="20"></td>
+                <td><input type="button" onclick="deleteRow(this)" value="Excluir" id="excluir"></td>
+            </tr>
+        </table>
+    
+        <input type="button" value="Nova Linha" id="novaLinha" onclick="inserir()">
+        <button id="enviar" name="enviar" value="Enviar" onclick="validar()">Enviar</button>
+    </form>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
